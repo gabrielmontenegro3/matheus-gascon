@@ -2,8 +2,18 @@ import { motion } from "framer-motion"
 import { ArrowRight, Info, Rocket, Bot, DollarSign, ArrowUp, ArrowLeft } from "lucide-react"
 import { useEffect, useState } from "react"
 
+interface Notification {
+  id: number
+  app: string
+  title: string
+  message: string
+  position: { top?: string; bottom?: string; left?: string; right?: string }
+  delay: number
+  zIndex: number
+}
+
 const LowClub = () => {
-  const [notifications, setNotifications] = useState([
+  const [notifications] = useState<Notification[]>([
     // Notificações em cima - Atrás do corpo (z-index menor)
     {
       id: 1,
@@ -410,7 +420,7 @@ const LiquidButtonCTA = () => {
 }
 
 // Componente de notificação
-const NotificationCard = ({ notification }: { notification: any }) => {
+const NotificationCard = ({ notification }: { notification: Notification }) => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {

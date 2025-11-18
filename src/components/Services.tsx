@@ -8,7 +8,7 @@ import {
   Database,
   Shield,
 } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const Services = () => {
   const [ref, inView] = useInView({

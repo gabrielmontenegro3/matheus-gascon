@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
 
 const Contact = () => {
   const [ref, inView] = useInView({
